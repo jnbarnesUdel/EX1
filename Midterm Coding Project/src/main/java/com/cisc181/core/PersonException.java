@@ -19,5 +19,9 @@ public class PersonException extends Exception
 		throw new PersonException("Age over 100");
 	}
 	
-	Pattern pattern = 
+	Pattern pattern = Pattern.compile(regex);
+	if(pattern.matcher(Person.getPhone()) == false)
+	{
+		throw new PersonException("phone num wrong");
+	}
 }
