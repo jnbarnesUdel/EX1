@@ -3,7 +3,7 @@ package com.cisc181.core;
 import java.util.Date;
 import java.util.regex.Pattern;
 
-public class PersonException extends Exception 
+public class PersonException extends Exception
 {
 	Person Person;
 	String regex = "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$";
@@ -11,10 +11,7 @@ public class PersonException extends Exception
 	{
 		super(message);
 	}
-	if(Person.PrintAge()<100)
-	{
-	}
-	else
+	if(Person.PrintAge()>100)
 	{
 		throw new PersonException("Age over 100");
 	}
